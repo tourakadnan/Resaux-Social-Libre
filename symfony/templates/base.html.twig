@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        {# 'app' must match the first argument to addEntry() in webpack.config.js #}
+        {{ encore_entry_link_tags('app') }}
+
+        <!-- Renders a link tag (if your module requires any CSS)
+             <link rel="stylesheet" href="/build/app.css"> -->
+    {% endblock %}
+</head>
+{% block body_class %}<body>{% endblock %}
+{% block body %}
+
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('/build/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('/build/js/popper.js') }}"></script>
+    <script src="{{ asset('/build/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/build/lib/slick/slick.min.js') }}"></script>
+    <script src="{{ asset('/build/js/script.js') }}"></script>
+
+    {#{{ encore_entry_script_tags('app') }}#}
+{% endblock %}
+</body>
+</html>

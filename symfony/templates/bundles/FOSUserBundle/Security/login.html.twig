@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RSL | Sign in{% endblock %}
+
+{% block body_class %}<body class="sign-in">{% endblock %}
+
+{% block body %}
+    {{ include('@FOSUser/Security/login_content.html.twig') }}
+{% endblock %}
